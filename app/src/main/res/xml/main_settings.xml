@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory
+        android:title="Interface and such"
+        android:key="Interface_settings">
+
+        <CheckBoxPreference
+            android:key="pref_notification"
+            android:title="Notification"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:defaultValue="25"
+            android:digits="0123456789"
+            android:key="temp_to_notify"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:title="Temperature to notify"/>
+        <ListPreference
+            android:defaultValue='5'
+            android:key="number_of_stp"
+            android:title="Number of set points"
+            android:entries="@array/number_of_setpoints"
+            android:entryValues="@array/number_of_setpoints"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Data to send"
+        android:key="Location_settings">
+
+        <EditTextPreference
+            android:defaultValue="*IDN?"
+            android:key="text_to_send"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Text message to be sended" />
+        <ListPreference
+            android:defaultValue='LF'
+            android:key="eol_pref"
+            android:title="End of line character"
+            android:entries="@array/EOL_Characters"
+            android:entryValues="@array/EOL_Characters"/>
+        <EditTextPreference
+            android:defaultValue="1000"
+            android:inputType="number"
+            android:key="period_length_mills"
+            android:digits="0123456789"
+            android:numeric="integer"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Period length  (milliseconds)" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

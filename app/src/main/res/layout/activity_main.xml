@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.david.balanace_bt_hmi.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/edtext_Kp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtext_Ki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/edtext_Kp"
+        app:layout_constraintTop_toBottomOf="@+id/edtext_Kp" />
+
+    <EditText
+        android:id="@+id/edtext_Kd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/edtext_Ki"
+        app:layout_constraintTop_toBottomOf="@+id/edtext_Ki" />
+
+    <Button
+        android:id="@+id/bttn_Kp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="16dp"
+        android:text="KP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bttn_Ki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="KI"
+        app:layout_constraintStart_toStartOf="@+id/bttn_Kp"
+        app:layout_constraintTop_toTopOf="@+id/bttn_Kp" />
+
+    <Button
+        android:id="@+id/bttn_Kd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="KD"
+        app:layout_constraintStart_toStartOf="@+id/bttn_Ki"
+        app:layout_constraintTop_toTopOf="@+id/bttn_Ki" />
+
+    <Switch
+        android:id="@+id/switch_prepbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prepare Bluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textv_angle" />
+
+    <TextView
+        android:id="@+id/textv_angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="---"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textv_pid"
+        app:layout_constraintTop_toBottomOf="@+id/textv_pid" />
+
+    <TextView
+        android:id="@+id/textv_pid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="63dp"
+        android:text="---"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtext_Kd" />
+
+</android.support.constraint.ConstraintLayout>
